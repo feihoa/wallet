@@ -1,14 +1,15 @@
 <template>
   <div class="currency">
       <div class="currency__title page-title">
-        <h3>Курс валют</h3>
-      </div>
-      <button class="btn waves-effect waves-light btn-small currency__btn-refresh blue  darken-3" @click="refresh">
+        <h3 style="margin: 0">Курс валют</h3>
+        <button class="btn waves-effect waves-light btn-small currency__btn-refresh blue darken-3" @click="refresh">
           <i class="material-icons">autorenew</i>
-      </button>
+        </button>
+      </div>
+
       <Loader v-if="loading" />
       <div v-else class="currency__content">
-        <div class="currency__card card blue darken-3 bill-card">
+        <div class="currency__card card light-blue darken-3 bill-card">
           <div class="card-content currency__card-content white-text">
             <div class="currency__card-header card-header">
               <span class="currency__card-title card-title">Обменный курс (USD)</span>
@@ -57,7 +58,7 @@
 
 <script>
 
-import Chart from "../components/chart/Chart.vue";
+import Chart from "../components/charts/LineChart.vue";
 
 export default {
   name: "currency",
@@ -145,7 +146,7 @@ export default {
 <style lang="scss">
 .currency{
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   margin-top: 50px;
   position: relative;
   &__content{
@@ -153,10 +154,11 @@ export default {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items:center;
+    margin-top: 0px;
   }
   &__btn-refresh{
-    margin-left: 0;
-    display: block;
+    margin-left: 10px;
+    display: inline-block;
   }
   &__card-content{
     width: 100%;
@@ -175,7 +177,10 @@ export default {
     margin-top: 20px;
   }
   &__title{
-    display: inline
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 0;
   }
 }
 .select{
