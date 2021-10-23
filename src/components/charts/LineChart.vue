@@ -60,22 +60,27 @@
 </script>
 
 <style lang="scss">
-    .chart{
-        max-width: 320px;
-        margin:  0;
-        padding: 10px;;
-        border:1px solid rgba(0, 0, 0, 0.272);
-        margin-top: 20px;
+  .chart{
+      max-width: 320px;
+      margin:  0;
+      padding: 10px;;
+      border:1px solid rgba(0, 0, 0, 0.272);
+      margin-top: 20px;
 
-        &__title{
-            margin: 0;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-        .line-chart{
-          height: 300px!important;
-          width: 300px!important;
-        }
+      &__title{
+          margin: 0;
+          margin-bottom: 8px;
+          text-align: center;
+      }
+      .line-chart{
+        height: 300px!important;
+        width: 300px!important;
+      }
+    }
+    @media screen and (max-width:644px) {
+      .chart {
+        border:none;
+      }
     }
     @media screen and (max-width: 475px) {
         .line-chart{

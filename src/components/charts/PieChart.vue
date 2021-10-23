@@ -68,7 +68,7 @@
         border:1px solid rgba(0, 0, 0, 0.272);
         margin-top: 20px;
         border:none;
-        min-width: 270px;
+        min-width: 315px;
         margin-bottom: 20px;
 
         &__title{
