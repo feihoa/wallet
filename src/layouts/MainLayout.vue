@@ -20,7 +20,7 @@ export default {
   data: () => ({
     loading: true,
   }),
-  async mounted() {    
+  async mounted() {
     this.loading = false;
   },
   components: {
@@ -40,15 +40,15 @@ export default {
 </script>
 
 <style lang="scss">
-  .app-content{
-    padding:20px;
-    transition:padding-left .3s;
-    position:relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .app-page{
-    width: 100%;
-  }
+.app-content {
+  padding: 20px;
+  transition: padding-left 0.3s;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.app-page {
+  width: 100%;
+}
 </style>

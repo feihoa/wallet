@@ -7,13 +7,13 @@ const routes = [
   {
     path: "/",
     name: "home",
-    meta: { layout: "main"},
+    meta: { layout: "main" },
     component: () => import("../views/Currency.vue"),
   },
   {
     path: "/bill",
     name: "bill",
-    meta: { layout: "main"},
+    meta: { layout: "main" },
     component: () => import("../views/Bill.vue"),
   },
 ];
