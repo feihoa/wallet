@@ -145,6 +145,7 @@ export default {
       justify-content: space-between;
       align-items: center;
       text-align: center;
+      padding: 20px!important;
     }
     &__card-title{
       margin:0;
@@ -198,6 +199,9 @@ export default {
     .currency-line{
       margin: 0;
       padding-bottom: 20px;
+    }
+    .currency-line:last-of-type{
+      padding-bottom: 0px;
     }
     .cur-title{
       margin-top: 10px;
