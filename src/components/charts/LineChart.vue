@@ -1,7 +1,7 @@
 <template>
   <div class="chart">
     <h6 class="chart__title">Изменение стоимости криптовалюты за последние 14 дней (USD)</h6>
-    <line-chart :chart-data="datacollection"></line-chart>
+    <line-chart :chart-data="datacollection" :options="chartOptions" class="waves-effect line-chart"></line-chart>
   </div>
 </template>
 
@@ -18,7 +18,8 @@
         datacollection: {},
         labels: [],
         BTC: [],
-        ETH: []
+        ETH: [],
+        chartOptions: {responsive: true, maintainAspectRatio: false}
       }
     },
     props: ['data'],
@@ -59,21 +60,32 @@
 </script>
 
 <style lang="scss">
-    .chart{
-        max-width: 400px;
-        margin:  0;
-        padding: 10px;;
-        border:1px solid rgba(0, 0, 0, 0.272);
-        margin-top: 20px;
+  .chart{
+      max-width: 320px;
+      margin:  0;
+      padding: 10px;;
+      border:1px solid rgba(0, 0, 0, 0.272);
+      margin-top: 20px;
 
-        &__title{
-            margin: 0;
-            margin-bottom: 8px;
-        }
+      &__title{
+          margin: 0;
+          margin-bottom: 8px;
+          text-align: center;
+      }
+      .line-chart{
+        height: 300px!important;
+        width: 300px!important;
+      }
+    }
+    @media screen and (max-width:644px) {
+      .chart {
+        border:none;
+      }
     }
     @media screen and (max-width: 475px) {
-        .chart{
-            max-width: 300px;
+        .line-chart{
+          height: 300px!important;
+          width: 300px!important;
         }
 }
 </style>

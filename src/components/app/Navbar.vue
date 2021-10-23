@@ -12,7 +12,7 @@
           :to="link.url"
           :exact="link.exact"
         >
-            <a href="#" class=" waves-effect waves-orange pointer black-text">{{ link.title }}</a>
+            <a href="#" class=" waves-effect waves-blue pointer black-text">{{ link.title }}</a>
           </router-link>
           </div>
         </div>

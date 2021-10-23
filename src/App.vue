@@ -25,5 +25,6 @@ export default {
 @import "~materialize-css/dist/css/materialize.min.css";
 #app{
   min-width: 315px;
+  max-width: 1440px;
 }
 </style>
