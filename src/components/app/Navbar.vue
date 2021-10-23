@@ -2,20 +2,24 @@
   <nav class="navbar blue lighten-1">
     <div class="nav-wrapper">
       <div class="navbar-left">
-        <span class="black-text navbar__date">{{ date | date("datetime") }}</span>
-          <div class="navbar__pages-links">
+        <span class="black-text navbar__date">{{
+          date | date("datetime")
+        }}</span>
+        <div class="navbar__pages-links">
           <router-link
-          v-for="link in links"
-          class="navbar__page-link"
-          :key="link.url"
-          tag="li"
-          :to="link.url"
-          :exact="link.exact"
-        >
-            <a href="#" class=" waves-effect waves-blue pointer black-text">{{ link.title }}</a>
+            v-for="link in links"
+            class="navbar__page-link"
+            :key="link.url"
+            tag="li"
+            :to="link.url"
+            :exact="link.exact"
+          >
+            <a href="#" class="waves-effect waves-blue pointer black-text">{{
+              link.title
+            }}</a>
           </router-link>
-          </div>
         </div>
+      </div>
     </div>
   </nav>
 </template>
@@ -26,7 +30,7 @@ export default {
     date: new Date(),
     interval: null,
     dropdown: null,
-     links: [
+    links: [
       { title: "Обменный курс", url: "/" },
       { title: "Счет", url: "/bill", exact: true },
     ],
@@ -49,37 +53,35 @@ export default {
   },
   computed: {
     name() {
-      return "Имя"
+      return "Имя";
     },
   },
-  methods: {
-  },
+  methods: {},
 };
 </script>
 
 <style lang="scss">
-  .navbar{
-    position: fixed;
-    z-index:100;
-    &__date{
-      margin-left: 10px;
-    }
-    &__pages-links{
-      display: flex;
-      justify-content: space-between;
-      margin-right: 20px;
-      min-width: 155px;
-    }
-    &__page-link {
-      text-decoration: none;
-      list-style-type: none;
-          text-align: center;
-
-    }
+.navbar {
+  position: fixed;
+  z-index: 100;
+  &__date {
+    margin-left: 10px;
   }
-  .navbar-left{
+  &__pages-links {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    margin-right: 20px;
+    min-width: 155px;
   }
+  &__page-link {
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+  }
+}
+.navbar-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 </style>
